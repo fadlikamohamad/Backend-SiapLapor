@@ -21,5 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('report/admin', '\App\Http\Controllers\ReportController@get_all_report');
 Route::get('report/{id}', '\App\Http\Controllers\ReportController@get_detail_report');
 Route::delete('report/delete/{id}', '\App\Http\Controllers\ReportController@delete_data_report');
-Route::get('report/user/{userId}', '\App\Http\Controllers\ReportController@get_user_report');
+Route::get('report/user/{email}', '\App\Http\Controllers\ReportController@get_user_report');
 Route::post('report/insert', '\App\Http\Controllers\ReportController@insert_data_report');
+Route::post('user/register', '\App\Http\Controllers\UserController@register');
+Route::get('user/role/{email}', '\App\Http\Controllers\UserController@checkRole');
+Route::get('user/username/{email}', '\App\Http\Controllers\UserController@checkUsername');
+Route::get('user/{email}', '\App\Http\Controllers\UserController@readUser');

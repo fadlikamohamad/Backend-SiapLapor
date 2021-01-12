@@ -16,11 +16,10 @@ class CreateReportTable extends Migration
         Schema::create('report', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nik');
-            $table->string('nama');
-            $table->string('telepon');
-            $table->string('alamat');
-            $table->string('isi_laporan');
-            $table->string('user_id');
+            $table->string('name');
+            $table->string('phone');
+            $table->string('report');
+            $table->string('email');
         });
     }
 
