@@ -27,7 +27,7 @@ class UserController extends Controller
         return response([
             'status' => true,
             'message' => 'Otorisasi berhasil',
-            'data' => $user->role
+            'data' => $user
         ], 200);
     }
 
