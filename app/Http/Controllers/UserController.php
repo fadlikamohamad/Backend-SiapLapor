@@ -15,6 +15,7 @@ class UserController extends Controller
         $register_user->password = $request->password;
         $register_user->address = $request->address;
         $register_user->role = "user";
+        $register_user->save();
         return response([
             'status' => true,
             'message' => 'User registered',
