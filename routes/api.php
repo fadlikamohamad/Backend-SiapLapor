@@ -27,3 +27,4 @@ Route::post('user/register', '\App\Http\Controllers\UserController@register');
 Route::get('user/role/{email}', '\App\Http\Controllers\UserController@checkRole');
 Route::get('user/username/{email}', '\App\Http\Controllers\UserController@checkUsername');
 Route::get('user/{email}', '\App\Http\Controllers\UserController@readUser');
+Route::get('user/profile/{email}', '\App\Http\Controllers\UserController@getProfile');

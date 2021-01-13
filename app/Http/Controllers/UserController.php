@@ -49,4 +49,13 @@ class UserController extends Controller
             'data' => $user
         ], 200);
     }
+
+    public function getProfile($email) {
+        $user = User::where('email', $email)->get();
+        return response([
+            'status' => true,
+            'message' => 'Profile',
+            'data' => $user
+        ], 200);
+    }
 }
